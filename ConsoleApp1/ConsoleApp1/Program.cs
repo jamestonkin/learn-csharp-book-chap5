@@ -18,6 +18,20 @@ namespace ConsoleApp1
             userName = Console.ReadLine();
             Console.Write("Please enter your age: ");
             userAge = Convert.ToInt32(Console.ReadLine());
+            if (userAge < 0 || userAge > 100)
+            {
+                Console.WriteLine("Invalid Age");
+                Console.WriteLine("Age must be between 0 and 100");
+            }
+            else if (userAge < 18)
+                Console.WriteLine("Sorry, you are under age.");
+            else if (userAge < 21)
+                Console.WriteLine("You need parental consent.");
+            else
+            {
+                Console.WriteLine("Congratulations!");
+                Console.WriteLine("You may sign up for the event!");
+            }
             Console.Write("Please enter the current year: ");
             currentYear = Convert.ToInt32(Console.ReadLine());
 
